@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+nav{
+    margin-top: 2%;
+}
+nav .menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin: auto;
+}
+
+.menu .logo a{
+    color: #353A40;
+    font-size: 25px;
+    font-weight: 600; 
+    text-decoration: none;
+}
+.menu ul li{
+    list-style: none;
+    font-weight: 500;
+}
+.menu .right-menu{
+    display: flex;
+}
+.right-menu .middle-menu ul li{
+    padding: 7px 14px;
+    border-radius: 5px;
+    display: inline-flex;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.right-menu .middle-menu ul li:hover{
+    transform: translateY(-3px);
+    font-weight: 600;
+}
+.right-menu .middle-menu ul li a{
+    color: #353A40;
+    text-decoration: none;
+}
+.right-menu .button {
+    background: #ff8800;
+    padding: 7px 14px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.right-menu .button:hover{
+    transform: scale(1.05);
+
+}
+.button a{
+    text-decoration: none;
+    color: white;
+}
+.hamburger {
+    display: none;
+    position: absolute;
+    right: 4%;
+    cursor: pointer;
+    font-size: 30px;
+    color: #353A40;
+}
+
+.container{
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+
+}
+.container .right-side{
+    display: flex;
+    flex-direction: column;
+    margin-top: 110px;
+}
+.container .about{
+    margin-top: 55px;
+    max-width: 500px;
+}
+.right-side .head-title{
+    font-size: 50px;
+    font-weight: 600;
+    max-width: 400px;
+}
+.right-side .head-title.next{
+    margin-top: -20px;
+}
+.right-side .description{
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+.image {
+    max-width: 500px;
+    position: relative;
+    margin-top: 70px;
+    border-radius: 3px;
+}
+.image .cat-image{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.lower a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;  
+}
+.lower-button{
+    border: none;
+    background: #ff8800;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+.lower-button:hover{
+    transform: scale(1.05);
+}
+@media (max-width:768px){
+    .menu .logo a{
+        font-size: 25px;
+    }  
+    .middle-menu {
+        display: none;
+    }
+    .right-menu .button{
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    } 
+    .right-menu.active .middle-menu {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #ff8800;
+        padding: 10px;
+        width: 200px;
+        border-radius: 5px;
+        z-index: 1;
+    }
+    .middle-menu ul {
+        flex-direction: column;
+    }
+
+    .middle-menu ul li {
+        margin: 5px 0;
+    }
+    .middle-menu ul li a{
+        color: white;
+    }
+    .middle-menu ul li a {
+        padding: 10px;
+        color: white;
+    }
+    .container{
+        flex-direction: column-reverse;
+        padding: 20px;
+        gap: 0;
+    }
+    .container .right-side{
+        margin-top: 0;
+    }
+    .right-side .head-title{
+        font-size: 45px;
+    }
+    .lower{
+        margin-top: 20px;
+    }
+
+}
